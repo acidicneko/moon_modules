@@ -9,7 +9,9 @@ These modules are installable with the Moon Manager, `mm` utility.
 - `working_dir` in `basics.sh`
 - `check_last_status` in `last_status.sh`
 - `battery` in `battery.sh`
-- `git` in `git.sh`
+- `git_module` in `git.sh`
+- `date_module` in `date.sh`
+- `time_module` in `date.sh`
 
 ## Installing a module
 All modules are contained within a set.
@@ -17,7 +19,12 @@ A set can contain many modules in it. To get a module you have to install the wh
 
 To install the module `battery`, you have to install `battery.sh` set.
 
-To install a set do - 
+First update the database with -
+```shell
+mm -p
+```
+
+Then to install a set do - 
 ```shell
 mm -i battery.sh
 ```
