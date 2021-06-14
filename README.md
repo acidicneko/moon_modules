@@ -3,6 +3,8 @@ This repository contains modules for the [Moon Prompt](https://github.com/ayush7
 
 These modules are installable with the Moon Manager, `mm` utility.
 
+For install instructions check Moon's GitHub repo.
+
 ## Available Modules
 - `username` in `basics.sh`
 - `hostname` in `basics.sh`
@@ -12,31 +14,3 @@ These modules are installable with the Moon Manager, `mm` utility.
 - `git_module` in `git.sh`
 - `date_module` in `date.sh`
 - `time_module` in `date.sh`
-
-## Installing a module
-All modules are contained within a set.
-A set can contain many modules in it. To get a module you have to install the whole set.
-
-To install the module `battery`, you have to install `battery.sh` set.
-
-First update the database with -
-```shell
-mm -p
-```
-
-Then to install a set do - 
-```shell
-mm -i battery.sh
-```
-
-### Using a module
-To use a module, include it in the `MODULES` variable in `~/.config/moon/moon.sh`
-```shell
-# Other stuff
-MODULES="\n\
-$(working_dir) $(battery)\
-\n >>"
-
-prompt=$MODULES
-export PS1=$prompt
-```
